@@ -20,7 +20,6 @@ d["repeating-linear-gradient"]=d["repeating-radial-gradient"]=d["radial-gradient
 k;for(k in d){var g=d[k],c=g.property,g=k+"("+g.params+")";!b(g,c)&&b(a.prefix+g,c)&&a.functions.push(k)}for(var l in f)c=f[l],!b(l,c)&&b(a.prefix+l,c)&&a.keywords.push(l)})();(function(){function b(a){h.textContent=a+"{}";return!!h.sheet.cssRules.length}var d={":any-link":null,"::backdrop":null,":fullscreen":null,":full-screen":":fullscreen","::placeholder":null,":placeholder":"::placeholder","::input-placeholder":"::placeholder",":input-placeholder":"::placeholder",":read-only":null,":read-write":null,
 "::selection":null},e={keyframes:"name",viewport:null,document:'regexp(".")'};a.selectors=[];a.selectorMap={};a.atrules=[];var h=m.appendChild(document.createElement("style")),k;for(k in d){var g=d[k]||k,c=k.replace(/::?/,function(b){return b+a.prefix});!b(g)&&b(c)&&(a.selectors.push(g),a.selectorMap[g]=c)}for(var l in e)d=l+" "+(e[l]||""),!b("@"+d)&&b("@"+a.prefix+d)&&a.atrules.push(l);m.removeChild(h)})();a.valueProperties=["transition","transition-property","will-change"];m.className+=" "+a.prefix;
 StyleFix.register(a.prefixCSS)}})(document.documentElement);
-prefixfree.js
 
 <h1>Assignment 1: CleanBot!</h1>
 
