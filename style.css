@@ -12,6 +12,12 @@ h1 {
   text-shadow: #555 4px 4px 4px; /* color, h-offset, v-offset, blur */
 }
 
+#myElement {
+  background: silver;
+  height: 300px;
+  text-align: center;
+  font: 30px/300px Helvetica, Arial, sans-serif;
+}
 
 @media only screen and (orientation: landscape){
   body{background: black;
@@ -19,4 +25,4 @@ h1 {
 
 @media only screen and (orientation: landscape){
   body{color: white;
-}
+  }
