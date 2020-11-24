@@ -3,10 +3,10 @@
 	<script src="prefixfree.min.js"></script>
 	<link rel="stylesheet" href="style.css">
 	<script src="modernizr-custom.js"></script>
-	<script src="hammer.min.js.map.js"></script>
+	<!-- <script src="hammer.min.js"></script> -->
 	<script src="https://hammerjs.github.io/dist/hammer.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtF59z8Ud9f_jPHPgaZJAaDAfjhBxg7ek&callback=myMap"></script>
-	<script src="custom.js"></script>
+	
 </head>
 <title > Assignment 1 Form </title>
 
@@ -78,13 +78,13 @@
     <div id="embedMap" style="width: 400px; height: 300px;">
         <!--Google map will be embedded here-->
     </div>
-</body>
+
   
 
-<img src="https://maps.googleapis.com/maps/api/staticmap?center=Ontario+Provincial+Parliment,Ontario,Canada
+<!-- <img src="https://maps.googleapis.com/maps/api/staticmap?center=Ontario+Provincial+Parliment,Ontario,Canada
 &zoom=15&size=600x300&maptype=roadmap
 &markers=color:red%7Clabel:A%7C43.662555,-79.391166
-&key=AIzaSyBtF59z8Ud9f_jPHPgaZJAaDAfjhBxg7ek">
+&key=AIzaSyBtF59z8Ud9f_jPHPgaZJAaDAfjhBxg7ek"> -->
 
 <div id="myElement"></div>
 
@@ -96,10 +96,39 @@
 
 <!--this is the calling interaction code-->
 <h2> The Vibration API</h2>
-<button class="button" onclick="vibrate(1000)">Vibrate Single</button><br>
+<button class="button" onclick="vibrate(3000)">Vibrate Single</button><br>
+
+</body>
 
 <script>
+	//code that allows us to use vibtration API
 	function vibrate (ms){
 		navigator.vibrate(ms);
 	}
 </script>
+
+<script>
+	//FOR BATTRY STATUS
+	var battery = navigator.battery || navigator.webkitBattery || navigator.mozBattery;
+	
+	function logBattery(battery) {
+		console.log(battery.level);
+		console.log(battery.charging);
+		console.log(dischargingTime);
+	
+		battery.addEventListener('chargingchange', function() {
+			console.log('Battery chargingchange event: ' + battery.charging);
+		}, false);
+	}
+	
+	if (navigator.getBattery) {
+		navigator.getBattery().then(logBattery);
+	} else if (battery) {
+		logBattery(battery);
+	}
+	
+	</script>
+
+<!--put JS files that should interact with your html later-->
+<script src="custom.js"></script>
+
