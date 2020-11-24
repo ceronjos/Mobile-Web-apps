@@ -3,11 +3,14 @@
 	<script src="prefixfree.min.js"></script>
 	<link rel="stylesheet" href="style.css">
 	<script src="modernizr-custom.js"></script>
+	<script src="hammer.min.js.map.js"></script>
+	<script src="https://hammerjs.github.io/dist/hammer.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtF59z8Ud9f_jPHPgaZJAaDAfjhBxg7ek&callback=myMap"></script>
 	<script src="custom.js"></script>
-    </head>
-<title > Assignment 2 Form </title>
+</head>
+<title > Assignment 1 Form </title>
 
-<h1 class="box" >Assignment 2: CleanBot!</h1>
+<h1 class="box" >Assignment 1: CleanBot!</h1>
 
 <p>Welcome to the world standard of cleanliness. CleanBot is a Zenbo robot that is designed to help us keep your household clean and tidy. Built with state of the art hardware and a friendly integrated smart assistant, CleanBot is built to serve the busy working customer who needs a little extra help keeping the house clean.</p>
 
@@ -23,25 +26,25 @@
 
 <form action="formAction" method="post">
 	<dl>
-	<! this code is for the email address field
+	<!-- this code is for the email address field-->
 		<dt><label for="email">Email Address:</label></dt>
 		<dt><input type="text" email="email"></dt>
 	</dl>
 
 	<dl>
-	<! this code is for the personal URL field
+	<!-- this code is for the personal URL field-->
 		<dt><label for="name">Personal URL:</label></dt>
 		<dt><input type="text" url ="url"></dt>
 	</dl>
 	
 	<dl>
-	<! this code is for the Year of Birth field
+	<!-- this code is for the Year of Birth field-->
 		<dt><label for="date">Year of Birth:</label></dt>
 		<dt><input type="date" id="date" name="date"></dt>
 	</dl>
 
 	<dl>
-	<! this code is for the personal Comments field
+	<!-- this code is for the personal Comments field-->
 		<dt><label for="text">Comments:</label></dt>
 		<dt><input type="text" comments ="text"></dt>
 	</dl>
@@ -66,4 +69,37 @@
 			<label for="accept">I confirm that the data entered is fictitious
 			</label>
 	</dl>
-<!--wjdoiwjeoijwoiejfwijef-->
+	
+
+	
+<!--This is the code that defines the area for my google map-->
+<body>
+    <button type="button" onclick="showPosition();" style="width:240px;height:40px;font-size:25px">Show My Location</button>
+    <div id="embedMap" style="width: 400px; height: 300px;">
+        <!--Google map will be embedded here-->
+    </div>
+</body>
+  
+
+<img src="https://maps.googleapis.com/maps/api/staticmap?center=Ontario+Provincial+Parliment,Ontario,Canada
+&zoom=15&size=600x300&maptype=roadmap
+&markers=color:red%7Clabel:A%7C43.662555,-79.391166
+&key=AIzaSyBtF59z8Ud9f_jPHPgaZJAaDAfjhBxg7ek">
+
+<div id="myElement"></div>
+
+<!--this is the calling interaction code-->
+<a href="tel:+14164145762">
+    If you would like to learn more about CleanBot services call (416-414-5762)
+</a>
+
+
+<!--this is the calling interaction code-->
+<h2> The Vibration API</h2>
+<button class="button" onclick="vibrate(1000)">Vibrate Single</button><br>
+
+<script>
+	function vibrate (ms){
+		navigator.vibrate(ms);
+	}
+</script>
