@@ -7,7 +7,7 @@ if (Modernizr.geolocation) {
 } 
 console.log(Modernizr)
 
-if (Modernizr.progressbar,meter) {
+if (Modernizr.progressbar.meter) {
   // supported
   console.log("supported")
 } else {
@@ -19,11 +19,16 @@ console.log(Modernizr)
 // maps code===================================================Maps code
 
 function showPosition(){
+  
   if(navigator.geolocation){
       navigator.geolocation.getCurrentPosition(showMap, showError)
       alert("Name of province: Ontario\nname of premier: Doug Ford\nattraction 1: http://www.harbourfrontcentre.com/\nattraction 2:https://www.centreisland.ca/ \nprovincial tax rate: 13%");
   } else{
-      alert("put a static map HERE");
+    var x = document.createElement("IMG");
+    x.setAttribute("src", "https://maps.googleapis.com/maps/api/staticmap?center=Ontario+Provincial+Parliment,Ontario,Canada&zoom=15&size=600x300&maptype=roadmap&markers=color:red%7Clabel:A%7C43.662555,-79.391166&key=AIzaSyBtF59z8Ud9f_jPHPgaZJAaDAfjhBxg7ek");
+    var MapHtmlElement = document.getElementById("embedMap")
+    MapHtmlElement.appendChild(x)
+    
   }
 }
 
@@ -63,6 +68,7 @@ function showPosition(){
 
 //hammer.js gestures
 var myElement = document.getElementById('myElement');
+console.log(myElement)
 
 // create a simple instance
 // by default, it only adds horizontal recognizers
@@ -76,10 +82,6 @@ mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 mc.on("panleft panright panup pandown tap press", function(ev) {
     myElement.textContent = ev.type +" gesture detected.";
 });
-
-
-
-
 
 
 //FOR BATTRY STATUS
