@@ -12,6 +12,32 @@ h1 {
   text-shadow: #555 4px 4px 4px; /* color, h-offset, v-offset, blur */
 }
 
+/* Code for text overflow CSS */
+div#Joke {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* or "clip" */
+}
+
+div#Joke {
+  transform: translate(10px, 10px)
+             skew(0deg)
+             rotate(-25deg)
+             scale(0.9);
+}
+
+/*selection colour change*/
+::selection {
+  background: purple;
+  color: hotpink;
+}
+
+::-moz-selection {
+  background: purple;
+  color: hotpink;
+}
+
+
 #myElement {
   background: silver;
   height: 300px;
